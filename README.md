@@ -1,4 +1,4 @@
-# LiquidHug
+# LiquidHug Online Store and Blog
 
 I developed a web app that serves as an online store and blog for a fictional company named Liquid Hug ( I love Coffee!). <br/>
 
