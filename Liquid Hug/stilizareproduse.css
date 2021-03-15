@@ -1,0 +1,47 @@
+/* Stilizarea containerelor care contin produsele din DB */
+.produs{
+    /* FlexBox */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* Dimensiuni Fixate */
+    width: 250px;
+    height: 350px;
+    /* Text */
+    text-align: center;
+    color: #355c7d;
+    border-top: 0.125em solid #dac74e;
+    margin: 0.5em 0.5em;
+
+}
+.denumire{
+    font-weight: 850;
+    font-size: 1.2em;
+}
+.imagine{
+    max-width: 100%;
+    height: auto;
+    border: 0.125em solid #dac74e;
+}
+.descriere{
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+.pret{
+    font-weight: 800;
+    font-size: 1.2em;
+    color: #dac74e;
+}
+.butonadaugare{
+    border: none;
+    background: none;
+    outline: none;
+    color: #dac74e;
+    font-weight: bold;
+    border: 0.125em solid #dac74e;
+    padding: 0.5em;
+}
+.butonadaugare:hover{
+    color: white;
+    background-color: #dac74e;
+}

@@ -1,0 +1,568 @@
+/* Reset CSS pentru a elimina anumite probleme pe diferite tipuri de browsere */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+/* Elemente globale de stilizare Font, Culoarea Fundalului, Culoarea si dimensiunea textului etc. */
+body {
+  font-family: "Cairo", sans-serif;
+}
+/* Elemente de stilizare pentru bara de navigatie comuna tuturor paginilor */
+header {
+  grid-area: navbar;
+  display: grid;
+  justify-items: center;
+  background: #6676a9;
+}
+/* Stilizare pentru index (NavBar) */
+.main-nav-index {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.main-nav-index ul {
+  padding: 0.75em;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  list-style: none;
+}
+.main-nav-index li {
+  text-align: center;
+}
+.main-nav-index a {
+  font-weight: 500;
+  color: white;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: color 0.5s;
+  text-transform: uppercase;
+}
+.main-nav a:hover {
+  color: #ede4ab;
+}
+/* Stilizare pentru paginile diferite de index (NavBar) */
+.main-nav {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.main-nav ul {
+  padding: 0.75em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+}
+.main-nav li {
+  text-align: center;
+}
+.main-nav a {
+  font-weight: 500;
+  color: white;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: color 0.5s;
+  text-transform: uppercase;
+}
+.main-nav a:hover {
+  color: #ede4ab;
+}
+/* Elemente de stilizare pentru bara de social */
+footer {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: footer;
+  background: #6676a9;
+  color: white;
+}
+#socialbar {
+  display: flex;
+  justify-content: center;
+}
+#copyright {
+  display: flex;
+  justify-content: center;
+}
+#socialbar a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+#socialbar a:hover {
+  color: #ede4ab;
+}
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "footer";
+}
+/* Elemente de stilizare pentru pagina de INDEX */
+/* Div Central */
+.wrapper-index {
+  /* height: 100vh; */
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "showcaseproducts"
+    "footer";
+  min-height: 100vh;
+}
+#buttonoferta:hover {
+  background: white;
+  border: 0.05em solid #6676a9;
+  color: #6676a9;
+}
+.showcaseproducts {
+  grid-area: showcaseproducts;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1.5em;
+}
+/* Stilizare Login/Register/Contact Us */
+/* Structura schelet a paginilor Login/Register/Contact Us */
+.wrapper-login-register {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "navbar navbar"
+    "showcase-on-form-pages main-form"
+    "footer footer";
+}
+.main-form {
+  grid-area: main-form;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.showcase-on-form-pages {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-area: showcase-on-form-pages;
+  background: url("imaginibranding/background.png") no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+}
+/* Stilizarea elementelor din formular: Input-uri Butoane Titlu  */
+.form-title {
+  color: #6676a9;
+  font-weight: bold;
+  font-size: 1.8em;
+}
+::placeholder {
+  color: #6676a9;
+}
+.form-item,
+.button-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.form-item input {
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #6676a9;
+  border-bottom: 0.0625em solid #6676a9;
+}
+.form-item textarea {
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  text-decoration: none;
+  resize: none;
+  border: none;
+  outline: none;
+  color: #6676a9;
+  border-bottom: 0.0625em solid #6676a9;
+}
+.formular,
+.form-title {
+  font-family: inherit;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button-form input {
+  font-family: inherit;
+  font-weight: bold;
+  padding: 0.75em;
+  width: 100%;
+  border: 0.08em solid white;
+  background: rgb(102, 118, 169);
+  background: linear-gradient(to left, #355c7d, #6c5b7b, #c06c84);
+  color: white;
+}
+.button-form input:hover {
+  background: white;
+  color: #6c5b7b;
+  border-bottom: 0.08em solid #c06c84;
+  border-top: 0.08em solid #6c5b7b;
+  border-left: 0.08em solid #355c7d;
+  border-right: 0.08em solid #355c7d;
+}
+.form-title,
+.form-item,
+.button-form {
+  margin: 0.75em 0em;
+}
+#text-termeni {
+  color: #6676a9;
+}
+#inregistrareDinLogin p {
+  color: #6676A9;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+#inregistrareDinLogin a{
+    text-decoration: none;
+}
+/* Elemente de stilizare pentru pagina BLOG / Respectiv Partea de Continut si Blog Boxes */
+/* Fiecare pagina de blog o sa aiba articolul in sine si un buton care are ca target pagina principala care contine toate postarile */
+.wrapper-blog {
+  /* Flex-Box Properties */
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F5F5;
+  /* Height Width Margin Paddin */
+}
+
+.blog-cards-wrapper {
+  /* Flex-Box Properties */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* Colors */
+}
+
+.blog-card {
+  /* Margin Padding Border Properties */
+  box-sizing: content-box;
+  padding: 1.8em;
+  margin: 1.8em 1.8em;
+  width: 60%;
+  /* Text properties */
+  text-align: center;
+  background-color: #6676a9;
+  color: white;
+  font-size: 1.25em;
+  box-shadow: 15px 15px 10px 0 #6c5b7b;
+  border-top: 2px solid #6c5b7b;
+  border-left: 2px solid #6c5b7b;
+}
+
+.blog-card a {
+  /* Stilizarea linkurilor care indica catre articolul integral */
+  /* Aceste link-uri sau butoane se gasesc in fiecare bog-card */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25em;
+  color: white;
+}
+
+.blog-card img {
+  /* Proprietati pentru dimensiune */
+  width: 17em;
+  height: 13em;
+  /* Margin Padding Display */
+  display: block;
+  margin: 10px auto;
+  /* Border */
+  border: 0.15em solid #6c5b7b;
+}
+
+.blog-card p {
+  /* Centrare si dimensiune redusa */
+  max-width: 50%;
+  margin: auto;
+}
+
+.blog-card h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* Elemente de stilizare pentru pagina */
+/* Elemente stilizare erori Login Register si Contact */
+.errorLogin{
+  font-weight: bold;
+  color: #800000;
+  text-align: center;
+}
+.errorRegister{
+  font-weight: bold;
+  color: #800000;
+  text-align: center;
+}
+.errorContact{
+  font-weight: bold;
+  color: #800000;
+  text-align: center;
+}
+/* Elementele de stilizare pentru pagina de utilizator logat */
+.wrapper-utilizator-logat{
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F5F5;
+}
+.wrapper-cupon-part{
+  display: flex;
+}
+#cupon{
+  flex: 1 1 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #6676a9;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 650;
+  padding: 0.125em;
+}
+.mesajUtilizatorLogat{
+  flex: 1 1 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #6676A9;
+  font-weight: 650;
+  font-size: 1.8em;
+  line-height: 2.5;
+}
+
+.mesajUtilizatorLogat i{
+  padding: 35px 35px;
+  border-radius: 50%;
+  color: white;
+  background-color: #6676a9;
+  margin: 10px 0;
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.5);
+}
+.evenimente{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #6676A9;
+  font-weight: 650;
+  font-size: 1.5em;
+  line-height: 2.5;
+}
+.evenimente i{
+  padding: 35px 35px;
+  background-color: rgb(102, 118, 169);
+  border-radius: 50%;
+  color: white;
+  background-color: #6676a9;
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.5);
+}
+.evenimente h1{
+  font-weight: 600;
+  font-size: 1.6em;
+  margin: 15px 0px;
+}
+.buton-logout{
+  margin: 15px auto;
+  text-align: center;
+  background-color: #800000;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px 0 #800000;
+}
+
+.buton-logout a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  color: white;
+  font-weight: 700;
+}
+
+/* Pagina succes mesaj */
+.mesajContactTrimis{
+  background-color: #4BB543;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  font-size: 1.5em;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.butonInapoiContact{
+  max-width: 50%;
+  margin: 1em auto;
+  padding: 1em;
+  background-color: white;
+}
+
+.butonInapoiContact a{
+  text-decoration: none;
+  color: #4BB543;
+}
+
+/* Stilizare cos de cumparaturi checkout si mesaj succes comanda*/
+
+.mesajConfirmareComanda{
+  background-color: #4BB543;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+#modalitate-plata{
+  color: #6676a9;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Cos de cumparaturi */
+
+.cart-container{
+  color: #6676a9;
+  margin: 30px;
+  font-size: 1.5em;
+}
+.cart-container h1,.cart-container h3 {
+  font-style: 25px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.cart-container table,.cart-container tr{
+  width: 100%;
+}
+.cart-container th{
+  padding: 20px;
+  font-weight: bolder;
+  font-size: 20px;
+  border: 2px solid #ede4ab;
+  text-align: center;
+}
+.cart-container td{
+  padding: 20px;
+  text-align: center;
+}
+.summary{
+  text-align: right;
+  margin-right: 50px;
+}
+.summary a{
+  text-decoration: none;
+  padding: 5px;
+}
+.cart-container input[type=text]{
+  width: 400px;
+  padding: 10px;
+}
+.thankyou{
+  font-size: 40px;
+  text-align: center;
+  margin-top: 20px;
+}
